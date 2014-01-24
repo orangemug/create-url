@@ -10,7 +10,7 @@ Any object keys not in the template URI will get added as params.
       returnTo: "snake"
     }); // => "/path/badgerindex=3&ref=mushroom&returnTo=snake"
 
-See <test/index.js> for more examples.
+See [tests](test/index.js) for more examples.
 
 
 ## License
