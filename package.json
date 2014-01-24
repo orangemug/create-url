@@ -1,0 +1,30 @@
+{
+  "name": "create-uri",
+  "version": "0.1.0",
+  "description": "Create a URI in a simple human readable way.",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "tape": "*",
+    "browserify": "*",
+    "testling": "*"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": {
+      "ie": [9, 10],
+      "firefox": "latest",
+      "android-browser": "4.2",
+      "iphone": "6.0"
+    }
+  },
+  "scripts": {
+    "test": "./node_modules/testling/bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orangemug/create-uri.git"
+  },
+  "homepage": "https://github.com/orangemug/create-uri",
+  "license": "MIT"
+}
