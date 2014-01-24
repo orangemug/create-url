@@ -21,6 +21,18 @@ test('valid URI with params', function (t) {
   t.end();
 });
 
+test('valid URI with fragment', function (t) {
+  var rslt = createURI("/path/{id}#section-{sectionNum}", {
+    id: "badger&snake",
+    index: 3,
+    ref: "mushroom&mushroom",
+    sectionNum: 1
+  });
+
+  t.equal(rslt, "/path/badger&snake?index=3&ref=mushroom%26mushroom#section-1");
+  t.end();
+});
+
 test('return null when invalid', function (t) {
   var rslt = createURI("/path/{id}", {});
 

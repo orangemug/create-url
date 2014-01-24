@@ -12,10 +12,12 @@
   "testling": {
     "files": "test/index.js",
     "browsers": {
-      "ie": [9, 10],
-      "firefox": "latest",
-      "android-browser": "4.2",
-      "iphone": "6.0"
+      "ie": [6, 7, 8, 9, 10],
+      "firefox": ["24..latest"],
+      "chrome": ["30..latest"],
+      "opera": ["12.1", "16..latest"],
+      "android-browser": "4.2..latest",
+      "iphone": "6..latest"
     }
   },
   "scripts": {
