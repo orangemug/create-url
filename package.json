@@ -15,7 +15,7 @@
       "ie": "6..10",
       "firefox": "24..latest",
       "chrome": "30..latest",
-      "opera": "12.1", "16..latest",
+      "opera": ["12.1", "16..latest"],
       "android-browser": "4.2..latest",
       "iphone": "6..latest"
     }
