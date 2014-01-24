@@ -1,9 +1,19 @@
 # create-uri
-Create a URI in a simple human readable way.
+Create a URI/path in a simple human readable way.
+
+[![browser support](https://ci.testling.com/orangemug/create-uri.png)](https://ci.testling.com/orangemug/create-uri)
+
+
+## Install
+Install the npm package and use [browserify](https://github.com/substack/http-browserify) or a simular tool to compile.
+
+    npm install https://github.com/orangemug/create-uri.git
+
 
 ## Usage
 Any object keys not in the template URI will get added as params.
 
+    var createURI = require("create-uri");
     createURI("/path/{id}", {
       id: "badger",
       ref: "mushroom",
