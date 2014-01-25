@@ -11,14 +11,14 @@
   },
   "testling": {
     "files": "test/index.js",
-    "browsers": {
-      "ie": "6..10",
-      "firefox": "24..latest",
-      "chrome": "30..latest",
-      "opera": ["12.1", "16..latest"],
-      "android-browser": "4.2..latest",
-      "iphone": "6..latest"
-    }
+    "browsers": [
+      "ie/6..latest",
+      "firefox/24..latest",
+      "chrome/28..latest",
+      "opera/12.0", "opera/15..latest",
+      "iphone/6..latest",
+      "safari/5.1..latest"
+    ]
   },
   "scripts": {
     "test": "./node_modules/testling/bin/cmd.js"
