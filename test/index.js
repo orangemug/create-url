@@ -1,8 +1,8 @@
 var test      = require('tape');
-var createURI = require("../index");
+var createURL = require("../index");
 
-test('valid URI', function (t) {
-  var rslt = createURI("/path/{id}", {
+test('valid URL', function (t) {
+  var rslt = createURL("/path/{id}", {
     id: "badger&snake"
   });
 
@@ -10,8 +10,8 @@ test('valid URI', function (t) {
   t.end();
 });
 
-test('valid URI with params', function (t) {
-  var rslt = createURI("/path/{id}", {
+test('valid URL with params', function (t) {
+  var rslt = createURL("/path/{id}", {
     id: "badger&snake",
     index: 3,
     ref: "mushroom&mushroom"
@@ -21,8 +21,8 @@ test('valid URI with params', function (t) {
   t.end();
 });
 
-test('valid URI with fragment', function (t) {
-  var rslt = createURI("/path/{id}#section-{sectionNum}", {
+test('valid URL with fragment', function (t) {
+  var rslt = createURL("/path/{id}#section-{sectionNum}", {
     id: "badger&snake",
     index: 3,
     ref: "mushroom&mushroom",
@@ -33,8 +33,8 @@ test('valid URI with fragment', function (t) {
   t.end();
 });
 
-test('valid URI with existing params', function (t) {
-  var rslt = createURI("/path/{id}?num=3#section-{sectionNum}", {
+test('valid URL with existing params', function (t) {
+  var rslt = createURL("/path/{id}?num=3#section-{sectionNum}", {
     id: "badger&snake",
     index: 3,
     ref: "mushroom&mushroom",
@@ -46,7 +46,7 @@ test('valid URI with existing params', function (t) {
 });
 
 test('return null when invalid', function (t) {
-  var rslt = createURI("/path/{id}", {});
+  var rslt = createURL("/path/{id}", {});
 
   t.notOk(rslt);
   t.end();

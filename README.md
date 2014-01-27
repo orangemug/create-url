@@ -1,20 +1,20 @@
-# create-uri
-Create a URI/path in a simple human readable way.
+# create-url
+Create a URL/path in a simple human readable way.
 
-[![browser support](https://ci.testling.com/orangemug/create-uri.png)](https://ci.testling.com/orangemug/create-uri)
+[![browser support](https://ci.testling.com/orangemug/create-url.png)](https://ci.testling.com/orangemug/create-url)
 
 
 ## Install
 Install the npm package and use [browserify](https://github.com/substack/http-browserify) or a simular tool to compile.
 
-    npm install https://github.com/orangemug/create-uri.git
+    npm install https://github.com/orangemug/create-url.git
 
 
 ## Usage
-Any object keys not in the template URI will get added as params.
+Any object keys not in the template URL will get added as params.
 
-    var createURI = require("create-uri");
-    createURI("/path/{id}#section-{sectionNum}", {
+    var createURL = require("create-url");
+    createURL("/path/{id}#section-{sectionNum}", {
       id: "badger",
       ref: "mushroom",
       returnTo: "snake",
