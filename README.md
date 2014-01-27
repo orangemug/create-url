@@ -14,12 +14,11 @@ Install the npm package and use [browserify](https://github.com/substack/http-br
 Any object keys not in the template URL will get added as params.
 
     var createURL = require("create-url");
-    createURL("/path/{id}#section-{sectionNum}", {
+    createURL("/path/{id}?index=3#section-{sectionNum}", {
       id: "badger",
       ref: "mushroom",
-      returnTo: "snake",
       sectionNum: 1
-    }); // => "/path/badgerindex=3&ref=mushroom&returnTo=snake#section-1"
+    }); // => "/path/badger?index=3&ref=mushroom#section-1"
 
 See [tests](test/index.js) for more examples.
 
