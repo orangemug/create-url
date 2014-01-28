@@ -5,9 +5,9 @@
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "tape": "*",
-    "browserify": "*",
-    "testling": "*"
+    "tape": "~2.3.2",
+    "browserify": "~3.24.1",
+    "testling": "~1.5.8"
   },
   "testling": {
     "files": "test/index.js",
