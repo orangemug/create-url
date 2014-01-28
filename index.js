@@ -11,6 +11,7 @@
  * @return {String} the new url
  */
 var FRAGMENT_REGEX = /#.*$/;
+var PARAM_REGEX = /\?(.*)$/;
 
 function createURI(path, params) {
   var k, v, paramStr, matches, pathMatch, fragmentMatch, fragment, urlParams = [];
@@ -19,6 +20,12 @@ function createURI(path, params) {
   if(matches) {
     path = path.replace(FRAGMENT_REGEX, "");
     fragment = matches[0];
+  }
+
+  matches = path.match(PARAM_REGEX);
+  if(matches) {
+    path = path.replace(matches[0], "");
+    urlParams = matches[1].split("&");
   }
 
   for(k in params) {
