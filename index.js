@@ -1,7 +1,7 @@
 /**
- * Create a URI in a human readable way
+ * Create a URL in a human readable way
  *
- *     createURI("/path/{uuid}", {
+ *     createURL("/path/{uuid}", {
  *       uuid: "1234",
  *       index: 3
  *     }) // => "/path/1234?index=3"
@@ -13,7 +13,7 @@
 var FRAGMENT_REGEX = /#.*$/;
 var PARAM_REGEX = /\?(.*)$/;
 
-function createURI(path, params) {
+function createURL(path, params) {
   var k, v, paramStr, matches, pathMatch, fragmentMatch, fragment, urlParams = [];
 
   matches = path.match(FRAGMENT_REGEX);
@@ -68,4 +68,4 @@ function createURI(path, params) {
   return path;
 }
 
-module.exports = createURI;
+module.exports = createURL;
